@@ -3,12 +3,12 @@ entries:
   three-tier-blog-app:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2025-08-04T00:03:45.1125879+05:45"
+    created: "2025-08-04T00:14:02.5606837+05:45"
     description: A Helm chart for Kubernetes
-    digest: 7a5f7bb0df79d494386204df5c9ea532a870c8d29d595c4e371037401c1e5f9f
+    digest: c9b1251163d60194db55f1a75286c882c1e252462aec1352af292be540639e3e
     name: three-tier-blog-app
     type: application
     urls:
-    - https://shrijanabudhathoki.github.io/three-tier-blog-ap/three-tier-blog-app-0.1.0.tgz
+    - https://shrijanabudhathoki.github.io/three-tier-blog-app/three-tier-blog-app-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-04T00:03:45.1096573+05:45"
+generated: "2025-08-04T00:14:02.5601793+05:45"
