@@ -1,0 +1,46 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+  namespace: default
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+      - myapp.blog.com
+      secretName: myapp-tls-secret
+  rules:
+  - host: myapp.blog.com
+    http:
+      paths:
+      - path: /api/users
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp-backend1
+            port:
+              number: 3000
+      - path: /api/blogs
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp-backend2
+            port:
+              number: 3001
+      - path: /api/comments
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp-backend1
+            port:
+              number: 3000
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: myapp-frontend
+            port:
+              number: 80
+
+
+

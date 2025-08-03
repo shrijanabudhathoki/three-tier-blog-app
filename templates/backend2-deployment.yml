@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-backend2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend2
+  template:
+    metadata:
+      labels:
+        app: backend2
+    spec:
+      containers:
+        - name: backend2
+          image: shrijanab/blog-backend2:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3001
+
